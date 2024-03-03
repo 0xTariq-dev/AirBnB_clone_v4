@@ -11,3 +11,16 @@ $(function() {
         }
     });    
 });
+$.ajax({
+    url: 'http://127.0.0.1:5001/api/v1/status/',
+    type: 'GET',
+    success: function(data) {
+        if (data.status === 'OK') {
+            $('#api_status').addClass('available');
+            $('#api_status').removeClass('not-available');
+        } else {
+            $('#api_status').addClass('not-available');
+            $('#api_status').removeClass('available');
+        }
+    },
+})
