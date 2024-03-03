@@ -1,5 +1,3 @@
-import $ from 'jquery';
-
 $(function () {
   $('input[type=checkbox]').change(function () {
     const amenities = {};
@@ -35,20 +33,20 @@ $(function () {
         const bathroom_s = (place.number_bathrooms !== 1) ? 'Bathrooms' : 'Bathroom';
 
         const placeArticle = `
-            <article>
-	            <div class="title_box">
-	                <h2>${place.name}</h2>
-	                <div class="price_by_night">${place.price_by_night}</div>
-	            </div>
-	            <div class="information">
-	                <div class="max_guest">${place.max_guest} ${guest_s}</div>
-                    <div class="number_rooms">${place.number_rooms} ${bedroom_s}</div>
-                    <div class="number_bathrooms">${place.number_bathrooms} ${bathroom_s}</div>
-	            </div>
-                <div class="description">
-	                ${place.description ? place.description : ''}
-                </div>
-	        </article>`;
+        <article>
+          <div class="title_box">
+            <h2>${place.name}</h2>
+            <div class="price_by_night">${place.price_by_night}</div>
+          </div>
+          <div class="information">
+            <div class="max_guest">${place.max_guest} ${guest_s}</div>
+            <div class="number_rooms">${place.number_rooms} ${bedroom_s}</div>
+            <div class="number_bathrooms">${place.number_bathrooms} ${bathroom_s}</div>
+          </div>
+          <div class="description">
+            ${place.description ? place.description : ''}
+          </div>
+        </article>`;
 
         $('section.places').append(placeArticle);
       });
