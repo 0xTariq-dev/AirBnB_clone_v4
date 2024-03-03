@@ -9,7 +9,8 @@ header .logo {
     left: 20px;
     height: 100%;
 }
-header #api_status {
+#api_status {
+    background-color: #CCCCCC;
     position: absolute;
     height: 40px;
     min-width: 40px;
@@ -17,9 +18,7 @@ header #api_status {
     right: 30px;
     top: 20px;
 }
-header .available {
+#head div.available {
     background-color: #FF5A5F;
 }
-header .not-available {
-    background-color: #CCCCCC;
-}
+
